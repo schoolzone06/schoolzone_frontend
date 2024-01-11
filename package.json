@@ -16,11 +16,13 @@
     "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.15.4",
+    "jotai": "^2.6.1",
     "next": "14.0.4",
     "react": "^18",
-    "react-dom": "^18",
-    "recoil": "^0.7.7",
-    "styled-components": "^6.1.8"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.4",
