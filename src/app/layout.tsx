@@ -1,6 +1,6 @@
-import Provider from "@/components/provider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Provider } from "jotai";
 
 const inter = Inter({ subsets: ["latin"] });
 
