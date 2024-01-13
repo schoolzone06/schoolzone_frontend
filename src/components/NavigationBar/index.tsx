@@ -9,8 +9,9 @@ import {
   ThreePRounded,
   WorkspacePremiumRounded,
 } from "@mui/icons-material";
+import "./style.css";
 
-const Navigation = () => {
+const NavigationBar = () => {
   const [value, setValue] = useState(0);
 
   return (
@@ -33,4 +34,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default NavigationBar;
