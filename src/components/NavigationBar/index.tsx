@@ -9,7 +9,6 @@ import {
   ThreePRounded,
   WorkspacePremiumRounded,
 } from "@mui/icons-material";
-import "./style.css";
 
 const NavigationBar = () => {
   const [value, setValue] = useState(0);
@@ -22,11 +21,28 @@ const NavigationBar = () => {
         setValue(newValue);
       }}
     >
-      <BottomNavigationAction label="메인" icon={<HomeRounded />} />
-      <BottomNavigationAction label="급식" icon={<RestaurantMenuRounded />} />
-      <BottomNavigationAction label="시간표" icon={<ScheduleRounded />} />
-      <BottomNavigationAction label="커뮤니티" icon={<ThreePRounded />} />
       <BottomNavigationAction
+        sx={{ p: "0 6px" }}
+        label="메인"
+        icon={<HomeRounded />}
+      />
+      <BottomNavigationAction
+        sx={{ p: "0 6px" }}
+        label="급식"
+        icon={<RestaurantMenuRounded />}
+      />
+      <BottomNavigationAction
+        sx={{ p: "0 6px" }}
+        label="시간표"
+        icon={<ScheduleRounded />}
+      />
+      <BottomNavigationAction
+        sx={{ p: "0 6px" }}
+        label="커뮤니티"
+        icon={<ThreePRounded />}
+      />
+      <BottomNavigationAction
+        sx={{ p: "0 6px" }}
         label="등급컷 확인"
         icon={<WorkspacePremiumRounded />}
       />
