@@ -25,7 +25,6 @@ const NavigationBar = () => {
         bottom: 0,
         left: 0,
         right: 0,
-        ".Mui-selected": { color: ({ palette }) => palette.grey[900] },
       }}
       elevation={3}
     >
@@ -35,22 +34,39 @@ const NavigationBar = () => {
         onChange={(event, newValue) => {
           setValue(newValue);
         }}
-        sx={{ color: ({ palette }) => palette.common.white }}
       >
-        <StyledBottomNavigationAction label="메인" icon={<HomeRounded />} />
         <StyledBottomNavigationAction
+          sx={{
+            "&.Mui-selected": { color: ({ palette }) => palette.grey[900] },
+          }}
+          label="메인"
+          icon={<HomeRounded />}
+        />
+        <StyledBottomNavigationAction
+          sx={{
+            "&.Mui-selected": { color: ({ palette }) => palette.grey[900] },
+          }}
           label="급식"
           icon={<RestaurantMenuRounded />}
         />
         <StyledBottomNavigationAction
+          sx={{
+            "&.Mui-selected": { color: ({ palette }) => palette.grey[900] },
+          }}
           label="시간표"
           icon={<ScheduleRounded />}
         />
         <StyledBottomNavigationAction
+          sx={{
+            "&.Mui-selected": { color: ({ palette }) => palette.grey[900] },
+          }}
           label="커뮤니티"
           icon={<ThreePRounded />}
         />
         <StyledBottomNavigationAction
+          sx={{
+            "&.Mui-selected": { color: ({ palette }) => palette.grey[900] },
+          }}
           label="등급컷 확인"
           icon={<WorkspacePremiumRounded />}
         />
