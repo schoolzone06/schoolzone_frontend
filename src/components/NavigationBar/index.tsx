@@ -20,7 +20,13 @@ const NavigationBar = () => {
 
   return (
     <Paper
-      sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
+      sx={{
+        position: "fixed",
+        bottom: 0,
+        left: 0,
+        right: 0,
+        ".Mui-selected": { color: ({ palette }) => palette.grey[900] },
+      }}
       elevation={3}
     >
       <BottomNavigation
@@ -29,6 +35,7 @@ const NavigationBar = () => {
         onChange={(event, newValue) => {
           setValue(newValue);
         }}
+        sx={{ color: ({ palette }) => palette.common.white }}
       >
         <StyledBottomNavigationAction label="메인" icon={<HomeRounded />} />
         <StyledBottomNavigationAction
