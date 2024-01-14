@@ -32,7 +32,7 @@ const font = {
   Body2: fontGenerator(Medium, 14, 20, 0),
   Caption: fontGenerator(Medium, 12, 18, 0),
 
-  Button: fontGenerator(SemiBold, 16, 12, 0),
+  Button: fontGenerator(SemiBold, 16, 19, 0),
 };
 
 export default font;
