@@ -20,6 +20,7 @@ const NavigationBar = () => {
       onChange={(event, newValue) => {
         setValue(newValue);
       }}
+      sx={{ position: "fixed", bottom: 0, width: "-webkit-fill-available" }}
     >
       <BottomNavigationAction
         sx={{ p: "0 6px" }}
