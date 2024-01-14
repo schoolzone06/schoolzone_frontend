@@ -1,7 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { BottomNavigation, BottomNavigationAction, Paper } from "@mui/material";
+import {
+  styled,
+  BottomNavigation,
+  BottomNavigationAction,
+  Paper,
+} from "@mui/material";
 import {
   HomeRounded,
   RestaurantMenuRounded,
@@ -24,29 +29,22 @@ const NavigationBar = () => {
         onChange={(event, newValue) => {
           setValue(newValue);
         }}
+        sx={{ ".Mui-selected": { color: (theme) => theme.palette.grey[900] } }}
       >
-        <BottomNavigationAction
-          sx={{ p: "0 6px" }}
-          label="메인"
-          icon={<HomeRounded />}
-        />
-        <BottomNavigationAction
-          sx={{ p: "0 6px" }}
+        <StyledBottomNavigationAction label="메인" icon={<HomeRounded />} />
+        <StyledBottomNavigationAction
           label="급식"
           icon={<RestaurantMenuRounded />}
         />
-        <BottomNavigationAction
-          sx={{ p: "0 6px" }}
+        <StyledBottomNavigationAction
           label="시간표"
           icon={<ScheduleRounded />}
         />
-        <BottomNavigationAction
-          sx={{ p: "0 6px" }}
+        <StyledBottomNavigationAction
           label="커뮤니티"
           icon={<ThreePRounded />}
         />
-        <BottomNavigationAction
-          sx={{ p: "0 6px" }}
+        <StyledBottomNavigationAction
           label="등급컷 확인"
           icon={<WorkspacePremiumRounded />}
         />
@@ -54,5 +52,9 @@ const NavigationBar = () => {
     </Paper>
   );
 };
+
+const StyledBottomNavigationAction = styled(BottomNavigationAction)(`
+  padding: 0 6px;
+`);
 
 export default NavigationBar;
