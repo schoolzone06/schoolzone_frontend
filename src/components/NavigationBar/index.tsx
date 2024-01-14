@@ -29,7 +29,6 @@ const NavigationBar = () => {
         onChange={(event, newValue) => {
           setValue(newValue);
         }}
-        sx={{ ".Mui-selected": { color: (theme) => theme.palette.grey[900] } }}
       >
         <StyledBottomNavigationAction label="메인" icon={<HomeRounded />} />
         <StyledBottomNavigationAction
