@@ -6,8 +6,12 @@ const globalCss = css`
 
   * {
     font-family: "'Pretendard', 'Helvetica Neue', sens-serif";
-    border: 0;
+    padding: 0;
     margin: 0;
+  }
+
+  .scroll {
+    overflow: hidden;
   }
 `;
 
