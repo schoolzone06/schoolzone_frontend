@@ -10,8 +10,8 @@ const globalCss = css`
     margin: 0;
   }
 
-  .scroll {
-    overflow: hidden;
+  ::-webkit-scrollbar {
+    display: none;
   }
 `;
 
