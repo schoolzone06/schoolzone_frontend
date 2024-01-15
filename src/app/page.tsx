@@ -11,7 +11,7 @@ import { CommentRounded, ThumbUpRounded } from "@mui/icons-material";
 
 export default function Home() {
   return (
-    <Container sx={{ pt: "72px", pb: "72px", overflowX: "scroll" }}>
+    <Container sx={{ marginBlock: "72px" }}>
       <Header />
       <Box
         sx={{

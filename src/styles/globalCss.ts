@@ -7,6 +7,8 @@ const globalCss = css`
   * {
     padding: 0;
     margin: 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 
   ::-webkit-scrollbar {
