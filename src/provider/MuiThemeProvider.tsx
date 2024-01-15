@@ -33,19 +33,13 @@ const muiTheme = createTheme({
     h4: font.Display4,
     h5: font.Display5,
     h6: font.Headline,
-    subtitle1: {
-      Subhead1: font.Subhead1,
-      Subhead2: font.Subhead2,
-      Subhead3: font.Subhead3,
-    },
+    subtitle1: font.Subhead1,
+    subtitle2: font.Subhead2,
+    subtitle3: font.Subhead3,
     body1: font.Body1,
     body2: font.Body2,
     caption: font.Caption,
-    button: {
-      button1: font.Button1,
-      button2: font.Button1,
-      button3: font.Button1,
-    },
+    button: font.Button,
   },
 });
 
