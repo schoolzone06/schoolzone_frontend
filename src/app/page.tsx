@@ -1,9 +1,11 @@
 "use client";
 
+import Login from "@/pages/Login";
+
 export default function Home() {
   return (
     <>
-      <h1>schoolzone</h1>
+      <Login />
     </>
   );
 }
