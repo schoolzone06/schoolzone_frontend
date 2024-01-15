@@ -5,7 +5,6 @@ const globalCss = css`
   @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
   * {
-    font-family: "'Pretendard', 'Helvetica Neue', sens-serif";
     padding: 0;
     margin: 0;
   }
