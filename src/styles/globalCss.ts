@@ -15,7 +15,7 @@ const globalCss = css`
     display: none;
   }
 
-  .css-1uxt8wb-MuiTypography-root {
+  .MuiTypography-root {
     font-family: "Pretendard", "Helvetica Neue", sens-serif;
   }
 `;
