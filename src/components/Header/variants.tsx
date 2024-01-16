@@ -1,5 +1,6 @@
 import {
   AccountCircleRounded,
+  ArrowBackRounded,
   ArrowDropDownRounded,
   NotificationsRounded,
 } from "@mui/icons-material";
@@ -35,13 +36,30 @@ const VariantOne = () => {
   );
 };
 
-const VariantTwo = () => {
-  return <div></div>;
+const VariantTwo = ({ text }: { text: string }) => {
+  return (
+    <Toolbar>
+      <IconButton color="inherit" sx={{ mr: "40px" }}>
+        <ArrowBackRounded />
+      </IconButton>
+      <Typography variant="subtitle3">{text}</Typography>
+      <Box>
+        <IconButton color="inherit">
+          <Badge badgeContent={99} color="secondary">
+            <NotificationsRounded />
+          </Badge>
+        </IconButton>
+        <IconButton color="inherit">
+          <AccountCircleRounded />
+        </IconButton>
+      </Box>
+    </Toolbar>
+  );
 };
 
 const Variants = {
   main: <VariantOne />,
-  "grade-cut": <VariantTwo />,
+  "grade-cut": <VariantTwo text="등급컷 확인" />,
 };
 
 export default Variants;
