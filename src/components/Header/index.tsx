@@ -7,14 +7,14 @@ interface HeaderProp {
 
 const Header = ({ page }: HeaderProp) => {
   return (
-    <Paper
-      sx={{ flexGrow: 1, position: "fixed", top: 0, left: 0, right: 0 }}
-      elevation={1}
-    >
+    <Paper sx={{ position: "fixed", top: 0, left: 0, right: 0 }}>
       <AppBar
         sx={{
           bgcolor: ({ palette }) => palette.common.white,
           color: ({ palette }) => palette.grey[900],
+          boxShadow: "unset",
+          borderBottom: "1px solid",
+          borderColor: ({ palette }) => palette.grey[300],
         }}
       >
         {Variants[page]}
