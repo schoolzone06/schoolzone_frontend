@@ -1,11 +1,11 @@
 "use client";
 
-import Login from "@/pages/Login";
+import Community from "./Community/page";
 
-export default function Home() {
+export default function Main() {
   return (
     <>
-      <Login />
+      <Community />
     </>
   );
 }
