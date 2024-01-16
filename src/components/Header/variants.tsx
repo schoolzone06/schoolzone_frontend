@@ -42,7 +42,12 @@ const VariantTwo = ({ text }: { text: string }) => {
       <IconButton color="inherit" sx={{ mr: "40px" }}>
         <ArrowBackRounded />
       </IconButton>
-      <Typography variant="subtitle3">{text}</Typography>
+      <Typography
+        variant="subtitle2"
+        sx={{ flex: "1 0 0", textAlign: "center" }}
+      >
+        {text}
+      </Typography>
       <Box>
         <IconButton color="inherit">
           <Badge badgeContent={99} color="secondary">
