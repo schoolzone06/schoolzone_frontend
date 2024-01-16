@@ -12,7 +12,7 @@ import { CommentRounded, ThumbUpRounded } from "@mui/icons-material";
 export default function Home() {
   return (
     <Container sx={{ marginBlock: "72px" }}>
-      <Header />
+      <Header page="main" />
       <Box
         sx={{
           display: "flex",
