@@ -1,14 +1,14 @@
-import { AppBar, Paper } from "@mui/material";
+import { AppBar as Bar, Paper } from "@mui/material";
 import Variants from "./variants";
 
-interface HeaderProp {
+interface AppBarProp {
   page: keyof typeof Variants;
 }
 
-const Header = ({ page }: HeaderProp) => {
+const AppBar = ({ page }: AppBarProp) => {
   return (
     <Paper sx={{ position: "fixed", top: 0, left: 0, right: 0 }}>
-      <AppBar
+      <Bar
         sx={{
           bgcolor: ({ palette }) => palette.common.white,
           color: ({ palette }) => palette.grey[900],
@@ -18,9 +18,9 @@ const Header = ({ page }: HeaderProp) => {
         }}
       >
         {Variants[page]}
-      </AppBar>
+      </Bar>
     </Paper>
   );
 };
 
-export default Header;
+export default AppBar;

@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Header from "@/components/Header";
-import NavigationBar from "@/components/NavigationBar";
+import AppBar from "@/components/AppBar";
+import BottomNavigation from "@/components/BottomNavigation";
 import { Box, Button, Chip, Container, Typography } from "@mui/material";
 import ClockIcon from "@/assets/ClockIcon.svg";
 import PlateIcon from "@/assets/PlateIcon.svg";
@@ -12,7 +12,7 @@ import { CommentRounded, ThumbUpRounded } from "@mui/icons-material";
 export default function Home() {
   return (
     <Container sx={{ marginBlock: "72px" }}>
-      <Header page="main" />
+      <AppBar page="main" />
       <Box
         sx={{
           display: "flex",
@@ -284,7 +284,7 @@ export default function Home() {
           </Box>
         </Box>
       </Box>
-      <NavigationBar />
+      <BottomNavigation />
     </Container>
   );
 }
