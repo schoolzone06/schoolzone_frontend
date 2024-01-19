@@ -65,6 +65,7 @@ const VariantTwo = ({ text }: { text: string }) => {
 const Variants = {
   main: <VariantOne />,
   "grade-cut": <VariantTwo text="등급컷 확인" />,
+  timetable: <VariantTwo text="시간표" />,
 };
 
 export default Variants;

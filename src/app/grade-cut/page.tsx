@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Header from "@/components/Header";
-import NavigationBar from "@/components/NavigationBar";
+import AppBar from "@/components/AppBar";
+import BottomNavigation from "@/components/BottomNavigation";
 import {
   Box,
   Chip,
@@ -60,7 +60,7 @@ const GradeCutPage = () => {
 
   return (
     <Container sx={{ mt: "57px" }}>
-      <Header page="grade-cut" />
+      <AppBar page="grade-cut" />
       <Box sx={{ display: "flex", flexDirection: "column", gap: "24px" }}>
         <Box>
           <Tabs value={value} onChange={handleTabChange} variant="scrollable">
@@ -171,7 +171,7 @@ const GradeCutPage = () => {
           </Box>
         </TableContainer>
       </Box>
-      <NavigationBar />
+      <BottomNavigation />
     </Container>
   );
 };

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import {
   styled,
-  BottomNavigation,
+  BottomNavigation as Navigation,
   BottomNavigationAction,
   Paper,
 } from "@mui/material";
@@ -15,7 +15,7 @@ import {
   WorkspacePremiumRounded,
 } from "@mui/icons-material";
 
-const NavigationBar = () => {
+const BottomNavigation = () => {
   const [value, setValue] = useState(0);
 
   return (
@@ -28,7 +28,7 @@ const NavigationBar = () => {
       }}
       elevation={3}
     >
-      <BottomNavigation
+      <Navigation
         showLabels
         value={value}
         onChange={(event, newValue) => {
@@ -70,7 +70,7 @@ const NavigationBar = () => {
           label="등급컷 확인"
           icon={<WorkspacePremiumRounded />}
         />
-      </BottomNavigation>
+      </Navigation>
     </Paper>
   );
 };
@@ -79,4 +79,4 @@ const StyledBottomNavigationAction = styled(BottomNavigationAction)(`
   padding: 0 6px;
 `);
 
-export default NavigationBar;
+export default BottomNavigation;
