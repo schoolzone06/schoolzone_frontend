@@ -14,7 +14,6 @@ const Header = ({ title }: HeaderType) => {
       width="100%"
       height="3rem"
       borderBottom={`1px solid ${theme.gray[300]}`}
-      position="fixed"
       p="0 24px"
       display="flex"
       alignItems="center"
