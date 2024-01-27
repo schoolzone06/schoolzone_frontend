@@ -3,16 +3,17 @@ import Header from "@/components/Header";
 import font from "@/styles/font";
 import theme from "@/styles/theme";
 import { Box, Typography } from "@mui/material";
+import TabContent from "@/components/TabContent";
 
 interface Tab {
   element: string;
 }
 
 const tabContents = [
-  "잡담 페이지 컨텐츠",
-  "취미 페이지 컨텐츠",
-  "학교분류 페이지 컨텐츠",
-  "모의고사/수능투기장 페이지 컨텐츠",
+  <TabContent key="tabContent" />,
+  <TabContent key="tabContent" />,
+  <TabContent key="tabContent" />,
+  <TabContent key="tabContent" />,
 ];
 
 const TabElement = ({
@@ -27,6 +28,7 @@ const TabElement = ({
         padding: "12px 8px",
         cursor: "pointer",
         transition: "border-color 0.3s",
+        boxSizing: "border-box",
       }}
       onClick={onClick}
     >
@@ -60,7 +62,7 @@ const Community = () => {
           />
         ))}
       </Box>
-      <Box p="16px">
+      <Box width="100%" boxSizing="border-box">
         <Typography variant="h5" sx={{ ...font.Subhead2, m: "0" }}>
           {tabContents[selectedTab]}
         </Typography>
