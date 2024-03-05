@@ -5,9 +5,18 @@ const globalCss = css`
   @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
   * {
-    font-family: "'Pretendard', 'Helvetica Neue', sens-serif";
-    border: 0;
+    padding: 0;
     margin: 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .MuiTypography-root {
+    font-family: "Pretendard", "Helvetica Neue", sens-serif;
   }
 `;
 

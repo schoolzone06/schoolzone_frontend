@@ -19,7 +19,14 @@ interface FloatingActionButtonPropsType
 }
 
 const FloatingActionButton = ({ type }: FloatingActionButtonPropsType) => {
-  return <Fab color="secondary">{icon[type]}</Fab>;
+  return (
+    <Fab
+      color="secondary"
+      sx={{ position: "fixed", right: " 16px", bottom: "72px" }}
+    >
+      {icon[type]}
+    </Fab>
+  );
 };
 
 export default FloatingActionButton;
