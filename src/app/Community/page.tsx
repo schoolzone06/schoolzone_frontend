@@ -1,20 +1,13 @@
-import React, { useState } from "react";
+"use client";
 import Header from "@/components/Header";
 import font from "@/styles/font";
 import theme from "@/styles/theme";
 import { Box, Typography } from "@mui/material";
-import TabContent from "@/components/TabContent";
+import React, { useState } from "react";
 
 interface Tab {
   element: string;
 }
-
-const tabContents = [
-  <TabContent key="tabContent" />,
-  <TabContent key="tabContent" />,
-  <TabContent key="tabContent" />,
-  <TabContent key="tabContent" />,
-];
 
 const TabElement = ({
   element,
@@ -39,7 +32,7 @@ const TabElement = ({
 
 const Community = () => {
   const [selectedTab, setSelectedTab] = useState(0);
-  const TabElements = ["잡담", "취미", "학교분류", "모의고사/수능투기장"];
+  const tabElements = ["잡담", "취미", "학교분류", "모의고사/수능투기장"];
 
   const handleTabClick = (index: number) => {
     setSelectedTab(index);
@@ -47,25 +40,20 @@ const Community = () => {
 
   return (
     <Box height="100vh">
-      <Header title="부산소프트웨어마이스터고등학교" />
+      <Header title="부산소프트웨어마이스터고" />
       <Box
         display="flex"
         justifyContent="center"
-        borderBottom={`2px solid ${theme.gray[300]}`}
+        borderBottom={`1px solid ${theme.gray[300]}`}
       >
-        {TabElements.map((element, index) => (
+        {tabElements.map((e, i) => (
           <TabElement
-            key={index}
-            element={element}
-            onClick={() => handleTabClick(index)}
-            isSelected={selectedTab === index}
+            key={i}
+            element={e}
+            onClick={() => handleTabClick(i)}
+            isSelected={selectedTab === i}
           />
         ))}
-      </Box>
-      <Box width="100%" boxSizing="border-box">
-        <Typography variant="h5" sx={{ ...font.Subhead2, m: "0" }}>
-          {tabContents[selectedTab]}
-        </Typography>
       </Box>
     </Box>
   );

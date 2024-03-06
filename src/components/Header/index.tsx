@@ -20,7 +20,10 @@ const Header = ({ title }: HeaderType) => {
       justifyContent="space-between"
       boxSizing="border-box"
     >
-      <button onClick={() => history.back} style={{ background: "none" }}>
+      <button
+        onClick={() => history.back}
+        style={{ background: "none", border: "none" }}
+      >
         <ArrowBack sx={{ w: "16px" }} />
       </button>
       <Typography sx={{ ...font.Subhead3 }}>{title}</Typography>
