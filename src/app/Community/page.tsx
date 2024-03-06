@@ -1,38 +1,23 @@
 "use client";
-import Header from "@/components/Header";
-import font from "@/styles/font";
-import theme from "@/styles/theme";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import React, { useState } from "react";
-
-interface Tab {
-  element: string;
-}
-
-const TabElement = ({
-  element,
-  onClick,
-  isSelected,
-}: Tab & { onClick: () => void; isSelected: boolean }) => {
-  return (
-    <div
-      style={{
-        borderBottom: `2px solid ${isSelected ? theme.primary : "transparent"}`,
-        padding: "12px 8px",
-        cursor: "pointer",
-        transition: "border-color 0.3s",
-        boxSizing: "border-box",
-      }}
-      onClick={onClick}
-    >
-      <Typography sx={{ ...font.Subhead2, m: "0" }}>{element}</Typography>
-    </div>
-  );
-};
+import Header from "@/components/Header";
+import theme from "@/styles/theme";
+import Posts from "@/components/Posts";
+import Tab from "@/types/tabs.type";
+import TabElement from "@/components/TabElement";
 
 const Community = () => {
   const [selectedTab, setSelectedTab] = useState(0);
-  const tabElements = ["잡담", "취미", "학교분류", "모의고사/수능투기장"];
+  const tabElements: Tab[] = [
+    { element: "잡담", component: <Posts category="잡담" /> },
+    { element: "취미", component: <Posts category="취미" /> },
+    { element: "학교분류", component: <Posts category="학교분류" /> },
+    {
+      element: "모의고사/수능투기장",
+      component: <Posts category="모의고사/수능투기장" />,
+    },
+  ];
 
   const handleTabClick = (index: number) => {
     setSelectedTab(index);
@@ -46,15 +31,17 @@ const Community = () => {
         justifyContent="center"
         borderBottom={`1px solid ${theme.gray[300]}`}
       >
-        {tabElements.map((e, i) => (
+        {tabElements.map((tab, index) => (
           <TabElement
-            key={i}
-            element={e}
-            onClick={() => handleTabClick(i)}
-            isSelected={selectedTab === i}
+            key={index}
+            element={tab.element}
+            onClick={() => handleTabClick(index)}
+            isSelected={selectedTab === index}
+            component={<></>}
           />
         ))}
       </Box>
+      <Box width="100%">{tabElements[selectedTab].component}</Box>
     </Box>
   );
 };
