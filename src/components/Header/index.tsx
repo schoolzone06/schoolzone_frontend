@@ -2,6 +2,7 @@ import font from "@/styles/font";
 import theme from "@/styles/theme";
 import { ArrowBack, Search } from "@mui/icons-material";
 import { Box, Typography } from "@mui/material";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 interface HeaderType {
@@ -9,6 +10,7 @@ interface HeaderType {
 }
 
 const Header = ({ title }: HeaderType) => {
+  const router = useRouter();
   return (
     <Box
       width="100%"
@@ -21,7 +23,7 @@ const Header = ({ title }: HeaderType) => {
       boxSizing="border-box"
     >
       <button
-        onClick={() => history.back}
+        onClick={() => router.back()}
         style={{ background: "none", border: "none" }}
       >
         <ArrowBack sx={{ w: "16px" }} />

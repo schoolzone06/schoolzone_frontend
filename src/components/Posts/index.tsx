@@ -12,6 +12,12 @@ const Posts = ({ category }: Posts) => {
     <Box width="100%">
       <Post />
       <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
     </Box>
   );
 };
