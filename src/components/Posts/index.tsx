@@ -1,13 +1,18 @@
+import { Box } from "@mui/material";
 import React from "react";
+import Post from "@/components/Post";
 
 interface Posts {
   category: string;
 }
+
 const Posts = ({ category }: Posts) => {
+  console.log(category);
   return (
-    <div>
-      <h1>{category}</h1>
-    </div>
+    <Box width="100%">
+      <Post />
+      <Post />
+    </Box>
   );
 };
 
