@@ -1,11 +1,11 @@
 "use client";
 import { Box } from "@mui/material";
 import React, { useState } from "react";
-import Header from "@/components/Header";
 import theme from "@/styles/theme";
 import Posts from "@/components/Posts";
 import Tab from "@/types/tabs.type";
 import TabElement from "@/components/TabElement";
+import AppBar from "@/components/AppBar";
 
 const Community = () => {
   const [selectedTab, setSelectedTab] = useState(0);
@@ -25,8 +25,9 @@ const Community = () => {
 
   return (
     <Box height="100vh">
-      <Header title="부산소프트웨어마이스터고" />
+      <AppBar page="community" />
       <Box
+        mt="56px"
         display="flex"
         justifyContent="center"
         borderBottom={`1px solid ${theme.gray[300]}`}
