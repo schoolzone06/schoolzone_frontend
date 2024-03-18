@@ -6,8 +6,8 @@ interface Posts {
   category: string;
 }
 
+// eslint-disable-next-line
 const Posts = ({ category }: Posts) => {
-  console.log(category);
   return (
     <Box width="100%">
       <Post />
