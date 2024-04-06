@@ -11,8 +11,6 @@ import {
   InputLabel,
   MenuItem,
   Select,
-  // eslint-disable-next-line import/named
-  SelectChangeEvent,
   Tab,
   Table,
   TableBody,
@@ -22,6 +20,7 @@ import {
   TableRow,
   Tabs,
   Typography,
+  type SelectChangeEvent,
 } from "@mui/material";
 import { TuneRounded } from "@mui/icons-material";
 
