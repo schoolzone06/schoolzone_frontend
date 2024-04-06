@@ -1,48 +1,37 @@
 "use client";
-import { Box } from "@mui/material";
-import React, { useState } from "react";
-import theme from "@/styles/theme";
-import Posts from "@/components/Posts";
-import Tab from "@/types/tabs.type";
-import TabElement from "@/components/TabElement";
+
+import { useState } from "react";
 import AppBar from "@/components/AppBar";
+import { Box, Tab, Tabs } from "@mui/material";
+import Posts from "@/components/Posts";
 
 const Community = () => {
-  const [selectedTab, setSelectedTab] = useState(0);
-  const tabElements: Tab[] = [
-    { element: "잡담", component: <Posts category="잡담" /> },
-    { element: "취미", component: <Posts category="취미" /> },
-    { element: "학교분류", component: <Posts category="학교분류" /> },
-    {
-      element: "모의고사/수능투기장",
-      component: <Posts category="모의고사/수능투기장" />,
-    },
-  ];
+  const [value, setValue] = useState(0);
 
-  const handleTabClick = (index: number) => {
-    setSelectedTab(index);
+  const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
+    setValue(newValue);
   };
 
   return (
     <Box height="100vh">
       <AppBar page="community" />
       <Box
-        mt="56px"
-        display="flex"
-        justifyContent="center"
-        borderBottom={`1px solid ${theme.gray[300]}`}
+        sx={{
+          mt: "56px",
+          display: "flex",
+          justifyContent: "center",
+          border: "1px solid",
+          borderColor: ({ palette }) => palette.grey[400],
+        }}
       >
-        {tabElements.map((tab, index) => (
-          <TabElement
-            key={index}
-            element={tab.element}
-            onClick={() => handleTabClick(index)}
-            isSelected={selectedTab === index}
-            component={<></>}
-          />
-        ))}
+        <Tabs value={value} onChange={handleTabChange} variant="scrollable">
+          <Tab label="잡담" />
+          <Tab label="취미" />
+          <Tab label="학교분류" />
+          <Tab label="모의고사/수능투기장" />
+        </Tabs>
       </Box>
-      <Box width="100%">{tabElements[selectedTab].component}</Box>
+      <Posts />
     </Box>
   );
 };
