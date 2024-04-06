@@ -1,9 +1,9 @@
-import Logo from "@/assets/svgs/Logo";
+import Image from "next/image";
+import Logo from "@/assets/Logo.svg";
 import font from "@/styles/font";
 import theme from "@/styles/theme";
 import { ArrowForwardIos } from "@mui/icons-material";
 import { Box, Button, Input, Typography } from "@mui/material";
-import React from "react";
 
 const Login = () => {
   return (
@@ -16,7 +16,7 @@ const Login = () => {
       alignItems="center"
       justifyContent="center"
     >
-      <Logo />
+      <Image src={Logo} alt="logo" />
       <Typography
         width="80%"
         textAlign="center"
