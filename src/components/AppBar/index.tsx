@@ -7,7 +7,7 @@ interface AppBarProp {
 
 const AppBar = ({ page }: AppBarProp) => {
   return (
-    <Paper sx={{ position: "fixed", top: 0, left: 0, right: 0 }}>
+    <Paper sx={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 10 }}>
       <Bar
         sx={{
           bgcolor: ({ palette }) => palette.common.white,
