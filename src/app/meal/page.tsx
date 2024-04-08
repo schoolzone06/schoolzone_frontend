@@ -1,4 +1,5 @@
 "use client";
+
 import AppBar from "@/components/AppBar";
 import BottomNavigation from "@/components/BottomNavigation";
 import FloatingActionButton from "@/components/FloatingActionButton";

@@ -1,4 +1,5 @@
 "use client";
+
 import AppBar from "@/components/AppBar";
 import theme from "@/styles/theme";
 import { Box, Button, IconButton, Typography } from "@mui/material";
