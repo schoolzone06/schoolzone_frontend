@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Logo from "@/assets/Logo.svg";
-import font from "@/styles/font";
 import theme from "@/styles/theme";
 import { ArrowForwardIos } from "@mui/icons-material";
 import { Box, Button, Input, Typography } from "@mui/material";
@@ -20,7 +19,7 @@ const Login = () => {
       <Typography
         width="80%"
         textAlign="center"
-        sx={{ wordBreak: "keep-all", ...font.Body1, mt: "1rem" }}
+        sx={{ wordBreak: "keep-all", typography: "body1", mt: "1rem" }}
       >
         대충 우리 서비스에 대한 글귀가 필요합니다. 카더가든
       </Typography>
@@ -67,7 +66,7 @@ const Login = () => {
               color: theme.white,
               height: "2.75rem",
               borderRadius: "12px",
-              ...font.Subhead1,
+              typography: "subtitle1",
             }}
           >
             {label}
@@ -98,7 +97,7 @@ const Login = () => {
             color: theme.white,
             height: "2.75rem",
             borderRadius: "12px",
-            ...font.Subhead1,
+            typography: "subtitle1",
           }}
         >
           회원가입하기

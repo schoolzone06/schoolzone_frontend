@@ -2,7 +2,6 @@
 import AppBar from "@/components/AppBar";
 import BottomNavigation from "@/components/BottomNavigation";
 import FloatingActionButton from "@/components/FloatingActionButton";
-import font from "@/styles/font";
 import theme from "@/styles/theme";
 import {
   ArrowBackIosRounded,
@@ -19,10 +18,10 @@ interface MenuType {
 const Menu = ({ name, ingrediants }: MenuType) => {
   return (
     <Box textAlign="center">
-      <Typography color={theme.gray[950]} sx={{ ...font.Body1 }}>
+      <Typography color={theme.gray[950]} sx={{ typography: "body1" }}>
         {name}
       </Typography>
-      <Typography color={theme.gray[700]} sx={{ ...font.Caption }}>
+      <Typography color={theme.gray[700]} sx={{ typography: "caption" }}>
         {ingrediants}
       </Typography>
     </Box>
@@ -34,7 +33,7 @@ const Meal = () => {
     <Container>
       <AppBar page="meal" />
       <Box mt="57px" pt="24px" boxSizing="border-box">
-        <Typography sx={{ ...font.Headline }} align="center">
+        <Typography sx={{ typography: "h6" }} align="center">
           2023년 12월 13일 (수) 아침
         </Typography>
         <Box
