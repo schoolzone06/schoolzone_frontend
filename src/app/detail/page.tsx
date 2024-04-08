@@ -1,4 +1,5 @@
 "use client";
+
 import AppBar from "@/components/AppBar";
 import font from "@/styles/font";
 import theme from "@/styles/theme";

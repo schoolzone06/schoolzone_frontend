@@ -20,8 +20,9 @@ const Community = () => {
           mt: "56px",
           display: "flex",
           justifyContent: "center",
-          border: "1px solid",
+          borderBottom: "1px solid",
           borderColor: ({ palette }) => palette.grey[400],
+          width: "100%",
         }}
       >
         <Tabs value={value} onChange={handleTabChange} variant="scrollable">
