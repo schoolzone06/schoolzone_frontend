@@ -36,27 +36,27 @@ const Meal = () => {
           <Box width="100%" display="flex" flexDirection="column" gap="8px">
             <Menu
               name="권세원볶음밥"
-              ingrediants="(조개, 대두, 철분, 황, 수은)"
+              ingredients="(조개, 대두, 철분, 황, 수은)"
             />
             <Menu
               name="권세원볶음밥"
-              ingrediants="(조개, 대두, 철분, 황, 수은)"
+              ingredients="(조개, 대두, 철분, 황, 수은)"
             />
             <Menu
               name="권세원볶음밥"
-              ingrediants="(조개, 대두, 철분, 황, 수은)"
+              ingredients="(조개, 대두, 철분, 황, 수은)"
             />
             <Menu
               name="권세원볶음밥"
-              ingrediants="(조개, 대두, 철분, 황, 수은)"
+              ingredients="(조개, 대두, 철분, 황, 수은)"
             />
             <Menu
               name="권세원볶음밥"
-              ingrediants="(조개, 대두, 철분, 황, 수은)"
+              ingredients="(조개, 대두, 철분, 황, 수은)"
             />
             <Menu
               name="권세원볶음밥"
-              ingrediants="(조개, 대두, 철분, 황, 수은)"
+              ingredients="(조개, 대두, 철분, 황, 수은)"
             />
           </Box>
           <ArrowForwardIosRounded />
