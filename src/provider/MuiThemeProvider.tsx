@@ -1,5 +1,3 @@
-"use client";
-
 import { createTheme, ThemeProvider } from "@mui/material";
 import font from "@/styles/font";
 import theme from "@/styles/theme";
