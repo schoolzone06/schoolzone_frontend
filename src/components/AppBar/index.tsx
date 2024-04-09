@@ -13,8 +13,6 @@ const AppBar = ({ page }: AppBarProp) => {
           bgcolor: ({ palette }) => palette.common.white,
           color: ({ palette }) => palette.grey[900],
           boxShadow: "unset",
-          borderBottom: "1px solid",
-          borderColor: ({ palette }) => palette.grey[300],
         }}
       >
         {Variants[page]}
