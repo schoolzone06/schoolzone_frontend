@@ -3,11 +3,12 @@
 import AppBar from "@/components/AppBar";
 import theme from "@/styles/theme";
 import { Box, Button, IconButton, Typography } from "@mui/material";
-import React from "react";
-import ThumbUpIcon from "@mui/icons-material/ThumbUp";
-import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
-import CommentIcon from "@mui/icons-material/Comment";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import {
+  ThumbUp,
+  ThumbUpOffAlt,
+  Comment,
+  ArrowDropDown,
+} from "@mui/icons-material";
 
 const Detail = () => {
   return (
@@ -17,7 +18,8 @@ const Detail = () => {
         <Box
           width="100vw"
           height="14rem"
-          borderBottom={`1px solid ${theme.gray[300]}`}
+          borderBottom="1px solid"
+          borderColor="gray.300"
           p="5px 24px 12px"
           boxSizing="border-box"
           display="flex"
@@ -30,17 +32,13 @@ const Detail = () => {
                 width="40px"
                 height="40px"
                 borderRadius="100%"
-                bgcolor={theme.gray[400]}
+                bgcolor="grey.400"
               />
               <Box>
-                <Typography
-                  sx={{ typography: "subtitle1", color: theme.gray[900] }}
-                >
+                <Typography sx={{ typography: "subtitle1", color: "grey.900" }}>
                   권세원
                 </Typography>
-                <Typography
-                  sx={{ typography: "caption", color: theme.gray[500] }}
-                >
+                <Typography sx={{ typography: "caption", color: "grey.500" }}>
                   10분 전
                 </Typography>
               </Box>
@@ -58,11 +56,11 @@ const Detail = () => {
               width: "7rem",
               paddingBlock: "12px",
               typography: "button",
-              background: theme.secondary,
+              background: "secondary",
             }}
           >
             좋아요
-            <ThumbUpIcon sx={{ ml: "8px" }} />
+            <ThumbUp sx={{ ml: "8px" }} />
           </Button>
         </Box>
         <Box p="20px 24px" boxSizing="border-box">
@@ -99,7 +97,7 @@ const Detail = () => {
                 color={theme.gray[900]}
                 gap="8px"
               >
-                <ThumbUpOffAltIcon sx={{ width: "16px", height: "16px" }} />
+                <ThumbUpOffAlt sx={{ width: "16px", height: "16px" }} />
                 12
               </Box>
               <Box
@@ -108,14 +106,14 @@ const Detail = () => {
                 color={theme.gray[900]}
                 gap="8px"
               >
-                <CommentIcon sx={{ width: "16px", height: "16px" }} />
+                <Comment sx={{ width: "16px", height: "16px" }} />
                 답글 남기기
               </Box>
             </Box>
             <Box>
               <Box display="flex" alignItems="center" gap="8px">
                 <IconButton sx={{ color: theme.secondary }}>
-                  <ArrowDropDownIcon />
+                  <ArrowDropDown />
                 </IconButton>
                 <Typography
                   sx={{ color: theme.secondary, typography: "caption" }}
@@ -156,9 +154,7 @@ const Detail = () => {
                       color={theme.gray[900]}
                       gap="8px"
                     >
-                      <ThumbUpOffAltIcon
-                        sx={{ width: "16px", height: "16px" }}
-                      />
+                      <ThumbUpOffAlt sx={{ width: "16px", height: "16px" }} />
                       12
                     </Box>
                     <Box
@@ -167,7 +163,7 @@ const Detail = () => {
                       color={theme.gray[900]}
                       gap="8px"
                     >
-                      <CommentIcon sx={{ width: "16px", height: "16px" }} />
+                      <Comment sx={{ width: "16px", height: "16px" }} />
                       답글 남기기
                     </Box>
                   </Box>

@@ -21,7 +21,7 @@ const Community = () => {
           display: "flex",
           justifyContent: "center",
           borderBottom: "1px solid",
-          borderColor: ({ palette }) => palette.grey[400],
+          borderColor: "grey.400",
           width: "100%",
         }}
       >

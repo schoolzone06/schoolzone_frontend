@@ -74,7 +74,7 @@ const GradeCutPage = () => {
           sx={{
             display: "flex",
             gap: "12px",
-            color: ({ palette }) => palette.grey[400],
+            color: "grey.400",
           }}
         >
           <FormControl size="small" sx={{ minWidth: "90px" }}>

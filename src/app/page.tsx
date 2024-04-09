@@ -36,7 +36,7 @@ export default function Home() {
             sx={{
               p: "8px 12px",
               border: "1px solid",
-              borderColor: ({ palette }) => palette.grey[400],
+              borderColor: "grey.400",
               borderRadius: "8px",
               display: "flex",
               flexDirection: "column",
@@ -104,7 +104,7 @@ export default function Home() {
               sx={{
                 p: "8px 12px",
                 border: "1px solid",
-                borderColor: ({ palette }) => palette.grey[400],
+                borderColor: "grey.400",
                 borderRadius: "8px",
                 display: "flex",
                 flexDirection: "column",
@@ -131,7 +131,7 @@ export default function Home() {
               sx={{
                 p: "8px 12px",
                 border: "1px solid",
-                borderColor: ({ palette }) => palette.grey[400],
+                borderColor: "grey.400",
                 borderRadius: "8px",
                 display: "flex",
                 flexDirection: "column",
@@ -158,7 +158,7 @@ export default function Home() {
               sx={{
                 p: "8px 12px",
                 border: "1px solid",
-                borderColor: ({ palette }) => palette.grey[400],
+                borderColor: "grey.400",
                 borderRadius: "8px",
                 display: "flex",
                 flexDirection: "column",

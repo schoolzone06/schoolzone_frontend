@@ -14,8 +14,8 @@ const AppBar = ({ page }: AppBarProp) => {
         left: 0,
         right: 0,
         zIndex: 10,
-        bgcolor: ({ palette }) => palette.common.white,
-        color: ({ palette }) => palette.grey[900],
+        bgcolor: "common.white",
+        color: "grey.900",
         boxShadow: "unset",
       }}
     >

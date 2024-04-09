@@ -4,13 +4,11 @@ import AppBar from "@/components/AppBar";
 import BottomNavigation from "@/components/BottomNavigation";
 import FloatingActionButton from "@/components/FloatingActionButton";
 import Menu from "@/components/Menu";
-import theme from "@/styles/theme";
 import {
   ArrowBackIosRounded,
   ArrowForwardIosRounded,
 } from "@mui/icons-material";
 import { Box, Container, IconButton, Typography } from "@mui/material";
-import React from "react";
 
 const Meal = () => {
   return (
@@ -21,17 +19,20 @@ const Meal = () => {
           2023년 12월 13일 (수) 아침
         </Typography>
         <Box
-          width="100%"
-          height="35rem"
-          border={`1px solid ${theme.gray[200]}`}
-          mt="12px"
-          borderRadius="8px"
-          display="flex"
-          p="16px 0"
-          alignItems="center"
+          sx={{
+            width: "100%",
+            height: "35rem",
+            border: "1px solid",
+            borderColor: "grey.200",
+            mt: "12px",
+            borderRadius: "8px",
+            display: "flex",
+            p: "16px 0",
+            alignItems: "center",
+          }}
         >
           <IconButton>
-            <ArrowBackIosRounded sx={{ color: theme.gray[900] }} />
+            <ArrowBackIosRounded sx={{ color: "grey.900" }} />
           </IconButton>
           <Box width="100%" display="flex" flexDirection="column" gap="8px">
             <Menu
@@ -59,7 +60,7 @@ const Meal = () => {
               ingredients="(조개, 대두, 철분, 황, 수은)"
             />
           </Box>
-          <ArrowForwardIosRounded />
+          <ArrowForwardIosRounded sx={{ color: "grey.900" }} />
         </Box>
       </Box>
       <FloatingActionButton type="calendar" />
