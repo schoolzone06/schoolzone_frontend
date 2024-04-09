@@ -3,6 +3,7 @@
 import AppBar from "@/components/AppBar";
 import BottomNavigation from "@/components/BottomNavigation";
 import FloatingActionButton from "@/components/FloatingActionButton";
+import Menu from "@/components/Menu";
 import theme from "@/styles/theme";
 import {
   ArrowBackIosRounded,
@@ -10,24 +11,6 @@ import {
 } from "@mui/icons-material";
 import { Box, Container, IconButton, Typography } from "@mui/material";
 import React from "react";
-
-interface MenuType {
-  name: string;
-  ingrediants: string;
-}
-
-const Menu = ({ name, ingrediants }: MenuType) => {
-  return (
-    <Box textAlign="center">
-      <Typography color={theme.gray[950]} sx={{ typography: "body1" }}>
-        {name}
-      </Typography>
-      <Typography color={theme.gray[700]} sx={{ typography: "caption" }}>
-        {ingrediants}
-      </Typography>
-    </Box>
-  );
-};
 
 const Meal = () => {
   return (
