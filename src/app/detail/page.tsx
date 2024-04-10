@@ -9,7 +9,7 @@ import {
   ArrowDropDown,
 } from "@mui/icons-material";
 
-const Detail = () => {
+const DetailPage = () => {
   return (
     <Box height="100vh">
       <AppBar page="community" />
@@ -167,4 +167,4 @@ const Detail = () => {
     </Box>
   );
 };
-export default Detail;
+export default DetailPage;

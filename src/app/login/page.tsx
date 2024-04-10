@@ -3,7 +3,7 @@ import Logo from "@/assets/Logo.svg";
 import { ArrowForwardIos } from "@mui/icons-material";
 import { Box, Button, Input, Typography } from "@mui/material";
 
-const Login = () => {
+const LoginPage = () => {
   return (
     <Box
       height="100vh"
@@ -108,4 +108,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginPage;

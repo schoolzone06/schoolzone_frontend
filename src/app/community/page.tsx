@@ -5,7 +5,7 @@ import AppBar from "@/components/AppBar";
 import { Box, Tab, Tabs } from "@mui/material";
 import Posts from "@/components/Posts";
 
-const Community = () => {
+const CommunityPage = () => {
   const [value, setValue] = useState(0);
 
   const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -37,4 +37,4 @@ const Community = () => {
   );
 };
 
-export default Community;
+export default CommunityPage;

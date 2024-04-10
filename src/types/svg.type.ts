@@ -1,7 +1,7 @@
-interface SVGAttributeProps extends React.SVGAttributes<HTMLOrSVGElement> {
+export default interface SVGAttributeProps
+  extends React.SVGAttributes<HTMLOrSVGElement> {
   width?: number;
   height?: number;
   color?: string;
+  // eslint-disable-next-line
 }
-
-export default SVGAttributeProps;
