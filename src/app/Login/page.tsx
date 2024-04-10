@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Logo from "@/assets/Logo.svg";
-import theme from "@/styles/theme";
 import { ArrowForwardIos } from "@mui/icons-material";
 import { Box, Button, Input, Typography } from "@mui/material";
 
@@ -38,7 +37,8 @@ const Login = () => {
             fullWidth
             disableUnderline
             sx={{
-              border: `1px solid ${theme.gray[400]}`,
+              border: "1px solid",
+              borderColor: "grey.400",
               borderRadius: "12px",
               height: "3rem",
               pl: "1rem",
@@ -55,15 +55,16 @@ const Login = () => {
         gap="1rem"
         pb="18px"
         boxSizing="border-box"
-        borderBottom={`1px solid ${theme.gray[400]}`}
+        borderBottom="1px solid"
+        borderColor="grey.400"
       >
         {["인증번호 받기", "로그인"].map((label, index) => (
           <Button
             key={index}
             fullWidth
             sx={{
-              backgroundColor: index === 0 ? theme.gray[300] : theme.primary,
-              color: theme.white,
+              backgroundColor: index === 0 ? "grey.300" : "primary",
+              color: "common.white",
               height: "2.75rem",
               borderRadius: "12px",
               typography: "subtitle1",
@@ -93,8 +94,8 @@ const Login = () => {
           fullWidth
           href="/signup"
           sx={{
-            backgroundColor: theme.primary,
-            color: theme.white,
+            backgroundColor: "primary",
+            color: "common.white",
             height: "2.75rem",
             borderRadius: "12px",
             typography: "subtitle1",

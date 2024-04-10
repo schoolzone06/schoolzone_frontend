@@ -1,4 +1,3 @@
-import theme from "@/styles/theme";
 import { Box, Typography } from "@mui/material";
 
 interface MenuType {
@@ -9,10 +8,10 @@ interface MenuType {
 const Menu = ({ name, ingredients: ingredients }: MenuType) => {
   return (
     <Box textAlign="center">
-      <Typography color={theme.gray[950]} sx={{ typography: "body1" }}>
+      <Typography color="grey.950" sx={{ typography: "body1" }}>
         {name}
       </Typography>
-      <Typography color={theme.gray[700]} sx={{ typography: "caption" }}>
+      <Typography color="grey.700" sx={{ typography: "caption" }}>
         {ingredients}
       </Typography>
     </Box>
