@@ -3,7 +3,6 @@
 import AppBar from "@/components/AppBar";
 import { Box, Button, IconButton, Typography } from "@mui/material";
 import { ThumbUp, ThumbUpOffAlt, ArrowDropDown } from "@mui/icons-material";
-import theme from "@/styles/theme";
 
 const DetailPage = () => {
   return (
@@ -14,7 +13,7 @@ const DetailPage = () => {
           width="100vw"
           height="14rem"
           borderBottom="1px solid"
-          borderColor={theme.gray[300]}
+          borderColor="grey.300"
           p="5px 24px 12px"
           boxSizing="border-box"
           display="flex"
