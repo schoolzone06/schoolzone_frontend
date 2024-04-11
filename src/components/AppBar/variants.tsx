@@ -67,6 +67,7 @@ const Variants = {
   "grade-cut": <VariantTwo text="등급컷 확인" />,
   timetable: <VariantTwo text="시간표" />,
   meal: <VariantTwo text="급식" />,
+  community: <VariantTwo text="커뮤니티" />,
 };
 
 export default Variants;

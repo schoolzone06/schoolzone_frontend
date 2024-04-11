@@ -14,10 +14,6 @@ const globalCss = css`
   ::-webkit-scrollbar {
     display: none;
   }
-
-  .MuiTypography-root {
-    font-family: "Pretendard", "Helvetica Neue", sens-serif;
-  }
 `;
 
 export default globalCss;

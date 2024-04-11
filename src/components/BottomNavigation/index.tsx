@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import theme from "@/styles/theme";
 import {
   styled,
   BottomNavigation as Navigation,
@@ -18,6 +19,13 @@ import {
 const BottomNavigation = () => {
   const [value, setValue] = useState(0);
 
+  const handleNavigationValue = (
+    event: React.SyntheticEvent,
+    newValue: number,
+  ) => {
+    setValue(newValue);
+  };
+
   return (
     <Paper
       sx={{
@@ -25,48 +33,24 @@ const BottomNavigation = () => {
         bottom: 0,
         left: 0,
         right: 0,
+        elevation: "3",
       }}
-      elevation={3}
     >
-      <Navigation
-        showLabels
-        value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
-      >
+      <Navigation showLabels value={value} onChange={handleNavigationValue}>
+        <StyledBottomNavigationAction label="메인" icon={<HomeRounded />} />
         <StyledBottomNavigationAction
-          sx={{
-            "&.Mui-selected": { color: ({ palette }) => palette.grey[900] },
-          }}
-          label="메인"
-          icon={<HomeRounded />}
-        />
-        <StyledBottomNavigationAction
-          sx={{
-            "&.Mui-selected": { color: ({ palette }) => palette.grey[900] },
-          }}
           label="급식"
           icon={<RestaurantMenuRounded />}
         />
         <StyledBottomNavigationAction
-          sx={{
-            "&.Mui-selected": { color: ({ palette }) => palette.grey[900] },
-          }}
           label="시간표"
           icon={<ScheduleRounded />}
         />
         <StyledBottomNavigationAction
-          sx={{
-            "&.Mui-selected": { color: ({ palette }) => palette.grey[900] },
-          }}
           label="커뮤니티"
           icon={<ThreePRounded />}
         />
         <StyledBottomNavigationAction
-          sx={{
-            "&.Mui-selected": { color: ({ palette }) => palette.grey[900] },
-          }}
           label="등급컷 확인"
           icon={<WorkspacePremiumRounded />}
         />
@@ -77,6 +61,9 @@ const BottomNavigation = () => {
 
 const StyledBottomNavigationAction = styled(BottomNavigationAction)(`
   padding: 0 6px;
+  &.Mui-selected {
+    color: ${theme.gray[900]}
+  }
 `);
 
 export default BottomNavigation;
